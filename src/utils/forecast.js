@@ -8,6 +8,7 @@ request({url,json:true},(error,{body})=>{
     callback('unable to find location',undefined)
    }
    else{
+    console.log(body.current.weather.descriptions)
     callback(undefined,body.current.weather_descriptions + ". It is currently " + body.current.temperature + "degrees out.It feels like"+ body.current.feelslike  + "degrees out.")
    }
 })
